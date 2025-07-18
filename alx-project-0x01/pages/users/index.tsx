@@ -6,7 +6,7 @@ interface UserPageProp {
 	posts: UserProps[];
 }
 
-const Users: React.FC<UsersPageProps> = ({ posts }) => {
+const Users: React.FC<UsersPageProps> = ({ users }) => {
 	return (
 		<div className="flex flex-col h-screen">
 		<Header />
@@ -17,7 +17,7 @@ const Users: React.FC<UsersPageProps> = ({ posts }) => {
 		</div>
 		
 		<div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-4">
-		{posts?.map((user: UserProps, index: number) => (
+		{users.map((user: UserProps, index: number) => (
 			<UserCard key={index} {...user} />
 		))}
 		</div>
