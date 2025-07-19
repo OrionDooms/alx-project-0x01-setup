@@ -52,10 +52,10 @@ const handleSubmit = (e: React.FormEvent) => {
 };
 
 return (
-	<div>
-	<div>
-	<h2>Add New User</h2>
-	<form>
+	<div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center">
+	<div className="bg-white rounded-lg p-6 w-full max-w-lg shadow-lg">
+	<h2 className="text-2xl font-bold mb-4 text-gray=800">Add New User</h2>
+	<form onSubmit={handleSubmit} className="space-y-4">
 		<input 
 		type="text"
 		name="name"
